@@ -59,8 +59,8 @@ README.md
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/sumu9897/car-rental.git
-cd car-rental
+git https://github.com/yatish2026/GearUp.git
+cd GearUp
 ```
 
 ### 2. Install dependencies
@@ -122,8 +122,4 @@ IMAGEKIT_URL_ENDPOINT=https://ik.imagekit.io/your_id
 - Subscription section for latest deals
 - Clean navigation and call-to-action flows
 
-### 📸 Sample Car Listing
-**BMW X5 (SUV 2022)**  
-💺 5 Seats | ⚙️ Automatic | ⛽ Gas 
-📍 Location: Dhaka  
-💵 ৳4500/day
+
