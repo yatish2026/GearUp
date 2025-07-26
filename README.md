@@ -1,4 +1,4 @@
-# 🚗 CarRental – Full Stack Car Booking Web App
+# 🚗 GearUp – Full Stack Car Booking Web App
 
 A professional-grade, scalable car rental web application that allows users to book vehicles, manage bookings, and for admins to manage inventory and operations. Built with performance, security, and user experience in mind.
 

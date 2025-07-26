@@ -5,6 +5,7 @@ import connectDB from './configs/db.js';
 import userRouter from './routes/userRoutes.js';
 import ownerRoutes from './routes/ownerRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
+import newsletterRouter from "./routes/newsletter.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ await connectDB(); // connect to DB
 app.use('/api/user', userRouter);
 app.use('/api/owner', ownerRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use("/api/newsletter", newsletterRouter);
 
 // Optional health check
 app.get('/', (req, res) => res.send("✅ Car Rental Server is Running"));

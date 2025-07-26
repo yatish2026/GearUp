@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 
 const Newsletter = () => {
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch("http://localhost:5000/api/newsletter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    if (res.ok) setSuccess(true);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -28,15 +41,20 @@ const Newsletter = () => {
         discounts
       </motion.p>
       <motion.form
-              initial={{opacity: 0, y:20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay: 0.4, duration: 0.5}} 
-               className="flex items-center justify-between max-w-2xl w-full md:h-13 h-12">
+        onSubmit={handleSubmit}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        className="flex items-center justify-between max-w-2xl w-full md:h-13 h-12"
+      >
         <input
           className="border border-gray-300 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-3 text-gray-500"
-          type="text"
+
+          type="email"
           placeholder="Enter your email id"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <button
           type="submit"
@@ -45,6 +63,7 @@ const Newsletter = () => {
           Subscribe
         </button>
       </motion.form>
+      {success && <p className="text-green-500 mt-2">Email sent successfully!</p>}
     </motion.div>
   );
 };

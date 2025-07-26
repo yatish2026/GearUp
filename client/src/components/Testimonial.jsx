@@ -10,7 +10,7 @@ const Testimonial = () => {
       location: "visakhapatnam, India",
       image: assets.testimonial_image_1,
       testimonial:
-        "CarRental made my trip in Mumbai hassle-free. The car was clean and the service was prompt.",
+        "GearUp made my trip in Mumbai hassle-free. The car was clean and the service was prompt.",
     },
     {
       name: "Priya Singh",
@@ -24,14 +24,14 @@ const Testimonial = () => {
       location: "Bangalore, India",
       image: assets.testimonial_image_3,
       testimonial:
-        "Affordable prices and great customer support. CarRental is my go-to for travel in Bangalore.",
+        "Affordable prices and great customer support. GearUp is my go-to for travel in Bangalore.",
     },
   ];
   return (
     <div className="py-28 px-6 md:px-16 lg:px-24 xl:px-44">
       <Title
         title="What Our Customers Say"
-        subTitle="Discover why travelers across Bangladesh trust CarRental for their transportation needs"
+        subTitle="Discover why travelers across INDIA trust GearUp for their transportation needs"
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-18">
