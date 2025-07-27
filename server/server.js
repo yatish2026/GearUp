@@ -9,14 +9,31 @@ import newsletterRouter from "./routes/newsletter.js";
 
 const app = express();
 
+// Dynamic CORS setup
+const allowedOrigins = [
+  "http://localhost:5173", // Local dev
+  
+  "https://gear-hgt28z7nd-yatishs-projects-0a9d1434.vercel.app" // Your current deployment
+];
+
 app.use(cors({
-  origin: ["http://localhost:5173", "https://car-rental-bd.vercel.app"],
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed for this origin: " + origin), false);
+    }
+  },
   credentials: true
 }));
 
 app.use(express.json());
 
-await connectDB(); // connect to DB
+// Connect to DB
+await connectDB();
 
 // Mount routes
 app.use('/api/user', userRouter);
@@ -24,7 +41,7 @@ app.use('/api/owner', ownerRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use("/api/newsletter", newsletterRouter);
 
-// Optional health check
+// Health check endpoint
 app.get('/', (req, res) => res.send("✅ Car Rental Server is Running"));
 
 const PORT = process.env.PORT || 5000;
