@@ -74,10 +74,10 @@ const Footer = () => {
         <div>
           <h2 className="text-base font-medium text-gray-800 uppercase">Resources</h2>
           <ul className="mt-3 flex flex-col gap-1.5">
-            <li><a href="#">Help Center</a> – Find answers to your questions and get support fast.</li>
-            <li><a href="#">Terms of Service</a> – Learn about our rules, obligations, and usage policies.</li>
-            <li><a href="#">Privacy Policy</a> – Understand how we handle your personal data.</li>
-            <li><a href="#">Insurance</a> – Get details on coverage, damage protection, and more.</li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a> </li>
+            <li><a href="#">Privacy Policy</a> </li>
+            <li><a href="#">Insurance</a></li>
           </ul>
         </div>
 
@@ -85,10 +85,10 @@ const Footer = () => {
         <div>
           <h2 className="text-base font-medium text-gray-800 uppercase">Contact</h2>
           <ul className="mt-3 flex flex-col gap-1.5">
-            <li>1234 Luxury Drive</li>
-            <li>San Francisco, CA 94107</li>
-            <li>+1 234 567890</li>
-            <li>info@example.com</li>
+            <li>1-90 patarega</li>
+            <li>visakhapatnam, CA 94107</li>
+            <li>7989479005</li>
+            <li>yatish.tech@gmail.com</li>
           </ul>
         </div>
       </motion.div>
@@ -98,11 +98,11 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5">
-        <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Mr.yatish. All rights reserved.</p>
         <ul className="flex items-center gap-4">
-          <li><a href="#">Privacy</a> – Learn how we protect your personal info.</li>
-          <li><a href="#">Terms</a> – Review the rules for using our service.</li>
-          <li><a href="#">Sitemap</a> – Navigate the structure of our website easily.</li>
+          <li><a href="#">Privacy</a> </li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Sitemap</a></li>
         </ul>
       </div>
     </motion.div>
