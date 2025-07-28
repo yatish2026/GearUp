@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "motion/react";
-import assest from "assert";
+import { motion } from "framer-motion"; // fixed typo from "motion/react"
+import assest from "assert"; // Not used – consider removing
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="px-6 md:px-16 lg:px-24 xl:px-32 mt-60 text-sm text-gray-500"
+      className="px-6 md:px-16 lg:px-24 xl:px-32 mt-60 text-sm bg-black text-yellow-400"
     >
       {/* Top Footer Content */}
       <motion.div
@@ -20,12 +20,9 @@ const Footer = () => {
         {/* Company Info */}
         <div>
           <motion.img
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            src="/car-rental-bd.png" // Change this to your actual logo path
-            alt="Company Logo"
-            className="h-16 md:h-20"
+            src="/car-rental-bd.png"
+            alt="logo"
+            style={{ width: "4cm", height: "4cm" }}
           />
           <motion.p
             initial={{ opacity: 0 }}
@@ -61,48 +58,48 @@ const Footer = () => {
 
         {/* Quick Links */}
         <motion.div>
-          <h2 className="text-base font-medium text-gray-800 uppercase">Quick Links</h2>
+          <h2 className="text-base font-semibold text-yellow-300 uppercase">Quick Links</h2>
           <ul className="mt-3 flex flex-col gap-1.5">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Browse Cars</a></li>
-            <li><a href="#">List Your Car</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#" className="hover:text-yellow-300">Home</a></li>
+            <li><a href="#" className="hover:text-yellow-300">Browse Cars</a></li>
+            <li><a href="#" className="hover:text-yellow-300">List Your Car</a></li>
+            <li><a href="#" className="hover:text-yellow-300">About Us</a></li>
           </ul>
         </motion.div>
 
         {/* Resources */}
         <div>
-          <h2 className="text-base font-medium text-gray-800 uppercase">Resources</h2>
+          <h2 className="text-base font-semibold text-yellow-300 uppercase">Resources</h2>
           <ul className="mt-3 flex flex-col gap-1.5">
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Terms of Service</a> </li>
-            <li><a href="#">Privacy Policy</a> </li>
-            <li><a href="#">Insurance</a></li>
+            <li><a href="#" className="hover:text-yellow-300">Help Center</a></li>
+            <li><a href="#" className="hover:text-yellow-300">Terms of Service</a></li>
+            <li><a href="#" className="hover:text-yellow-300">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-yellow-300">Insurance</a></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h2 className="text-base font-medium text-gray-800 uppercase">Contact</h2>
+          <h2 className="text-base font-semibold text-yellow-300 uppercase">Contact</h2>
           <ul className="mt-3 flex flex-col gap-1.5">
             <li>1-90 patarega</li>
-            <li>visakhapatnam, CA 94107</li>
+            <li>Visakhapatnam, CA 94107</li>
             <li>7989479005</li>
-            <li>yatish.tech@gmail.com</li>
+            <li><yatish className="techie"></yatish>yatish.techie@gmail.com</li>
           </ul>
         </div>
       </motion.div>
 
       {/* Divider */}
-      <hr className="border-gray-300 mt-8" />
+      <hr className="border-yellow-600 mt-8" />
 
       {/* Bottom Footer */}
       <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5">
-        <p>© {new Date().getFullYear()} Mr.yatish. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Mr. Yatish. All rights reserved.</p>
         <ul className="flex items-center gap-4">
-          <li><a href="#">Privacy</a> </li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Sitemap</a></li>
+          <li><a href="#" className="hover:text-yellow-300">Privacy</a></li>
+          <li><a href="#" className="hover:text-yellow-300">Terms</a></li>
+          <li><a href="#" className="hover:text-yellow-300">Sitemap</a></li>
         </ul>
       </div>
     </motion.div>

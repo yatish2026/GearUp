@@ -31,22 +31,28 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 text-gray-600 border-b border-borderColor relative transition-all ${location.pathname === "/" && "bg-light"
-        }`}
+      className={`flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-borderColor relative transition-all
+        bg-black text-[#FFD700]`} // <- Navbar Black + Text Gold
     >
       {/* Logo */}
       <Link to={"/"}>
-        <motion.img whileHover={{ scale: 1.05 }} src={assets.logo} alt="logo" className="h-20" />
+        <motion.img
+          whileHover={{ scale: 1.05 }}
+          src={assets.logo}
+          alt="logo"
+          style={{ width: "4cm", height: "4cm" }}
+        />
       </Link>
 
       {/* Mobile + Desktop Nav Menu */}
       <div
-        className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-16 max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 transform max-sm:transition-transform z-50 ${location.pathname === "/" ? "bg-light" : "bg-white"
-          } ${open ? "max-sm:translate-x-0" : "max-sm:translate-x-full"}`}
+        className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-16 max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 transform max-sm:transition-transform z-50
+        ${open ? "max-sm:translate-x-0" : "max-sm:translate-x-full"}
+        bg-black text-[#FFD700]`}
       >
         {/* Menu links */}
         {menuLinks.map((link, index) => (
-          <Link key={index} to={link.path} onClick={() => setOpen(false)}>
+          <Link key={index} to={link.path} onClick={() => setOpen(false)} className="hover:text-white transition">
             {link.name}
           </Link>
         ))}
@@ -55,7 +61,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56">
           <input
             type="text"
-            className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
+            className="py-1.5 w-full bg-transparent outline-none placeholder-gray-400 text-white"
             placeholder="Search products"
           />
           <img src={assets.search_icon} alt="search" />
@@ -63,7 +69,7 @@ const Navbar = () => {
 
         {/* Role switch + login/logout */}
         <div className="flex max-sm:flex-col items-start sm:items-center gap-6">
-          <button onClick={() => (isOwner ? navigate("/owner") : changeRole())} className="cursor-pointer">
+          <button onClick={() => (isOwner ? navigate("/owner") : changeRole())} className="cursor-pointer hover:text-white transition">
             {isOwner ? "Dashboard" : "List cars"}
           </button>
           <button
@@ -72,7 +78,7 @@ const Navbar = () => {
               else setShowLogin(true);
               setOpen(false);
             }}
-            className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg"
+            className="cursor-pointer px-8 py-2 bg-[#FFD700] hover:bg-[#e6c200] transition-all text-black font-semibold rounded-lg"
           >
             {user ? "Logout" : "Login"}
           </button>
