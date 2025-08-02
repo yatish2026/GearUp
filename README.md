@@ -59,7 +59,7 @@ README.md
 ### 1. Clone the repository
 
 ```bash
-git https://github.com/yatish2026/GearUp.git
+git clone https://github.com/yatish2026/GearUp.git
 cd GearUp
 ```
 
@@ -123,3 +123,5 @@ IMAGEKIT_URL_ENDPOINT=https://ik.imagekit.io/your_id
 - Clean navigation and call-to-action flows
 
 
+feel free to clone and imporve my application 
+yatish.techie@gmail.com
