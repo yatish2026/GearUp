@@ -14,6 +14,9 @@ import ManageBookings from "./pages/owner/ManageBookings";
 import Login from "./components/Login";
 import { Toaster } from "react-hot-toast";
 import { useAppContext } from "./context/AppContext";
+import SearchResults from "./pages/SearchResults";
+
+<Route path="/search" element={<SearchResults />} />
 
 const App = () => {
   // const [showLogin, setShowLogin] = useState(false);
@@ -39,7 +42,7 @@ const App = () => {
           <Route path="manage-bookings" element={<ManageBookings />} />
         </Route>
       </Routes>
-      {!isOwnerPath && <Footer/>}
+      {!isOwnerPath && <Footer />}
     </>
   );
 };

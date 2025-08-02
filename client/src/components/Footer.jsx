@@ -51,8 +51,9 @@ const Footer = () => {
               <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" className="w-5 h-5" />
             </a>
             <a href="https://www.linkedin.com/in/yatish-gottapu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" className="w-5 h-5" />
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="w-5 h-5" />
             </a>
+
           </motion.div>
         </div>
 
@@ -85,7 +86,7 @@ const Footer = () => {
             <li>1-90 patarega</li>
             <li>Visakhapatnam, CA 94107</li>
             <li>7989479005</li>
-            <li><yatish className="techie"></yatish>yatish.techie@gmail.com</li>
+            <li>yatish.techie@gmail.com</li>
           </ul>
         </div>
       </motion.div>
